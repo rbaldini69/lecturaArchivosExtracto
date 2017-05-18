@@ -115,12 +115,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SorteoNumeros.vb" />
-    <Compile Include="frmResultados.Designer.vb">
-      <DependentUpon>frmResultados.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmResultados.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Sorteo Loto.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -140,9 +134,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmResultados.resx">
-      <DependentUpon>frmResultados.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Sorteo Loto.resx">
       <DependentUpon>Sorteo Loto.vb</DependentUpon>
     </EmbeddedResource>
