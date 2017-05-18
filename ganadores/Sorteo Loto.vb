@@ -6,11 +6,11 @@ Imports System.Text
 
 Public Class Form1
     Dim ruta As String
-    Dim frmresul As New frmResultados()
+    'Dim frmresul As New frmResultados()
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        frmresul.Show()
-        frmresul.Location = New Point(1500, 600)
-        frmresul.WindowState = FormWindowState.Maximized
+        'frmresul.Show()
+        'frmresul.Location = New Point(1500, 600)
+        'frmresul.WindowState = FormWindowState.Maximized
         Me.txtUnidad.Focus()
     End Sub
     Private Sub Label2_Click(sender As Object, e As EventArgs)
@@ -74,10 +74,10 @@ Public Class Form1
                         Me.txtUnidad.Focus()                                        'UNIDAD PERMANECE CON FOCO PARA INSERTAR NUEVO DIGITO
                         Me.txtUnidad.BackColor = System.Drawing.Color.Red()         'EL COLOR DE FONDO LLAMA LA ATENCION CON EL COLOR ROJO
                         Me.txtUnidad.ForeColor = Color.White                        'EL COLOR DE LETRA SE PONE BLANCO
-                        frmresul.txtUnidad.Text = Me.txtUnidad.Text                 'MUESTRO EN PANATALLLA VIVO EL DIGITO SORTEADO
-                        frmresul.txtUnidad.ForeColor = Color.Red()                  'EL COLOR DE LETRA DE PANTALLA SE PONE ROJO
-                        frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"        'TXTMENSAJE TOMA VALOR "EXTRAER BOLILLA" EN PANTALLA VIVO
-                        frmresul.lblNumBilGdor.Visible = True                       'SE HACE VISIBLE MENSAJE 
+                        'frmresul.txtUnidad.Text = Me.txtUnidad.Text                 'MUESTRO EN PANATALLLA VIVO EL DIGITO SORTEADO
+                        'frmresul.txtUnidad.ForeColor = Color.Red()                  'EL COLOR DE LETRA DE PANTALLA SE PONE ROJO
+                        'frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"        'TXTMENSAJE TOMA VALOR "EXTRAER BOLILLA" EN PANTALLA VIVO
+                        'frmresul.lblNumBilGdor.Visible = True                       'SE HACE VISIBLE MENSAJE 
 
                         Exit Sub
                     ElseIf CantGan1 = 1 Then                                        '
@@ -90,10 +90,10 @@ Public Class Form1
                         'frmresul.lblBGanador.Visible = True
                         'frmresul.lblNumBilGdor.Visible = True
                         'frmresul.Timer1.Enabled = True
-                        frmresul.txtUnidad.Text = ganador
-                        frmresul.lblNumBilGdor.Visible = False
+                        'frmresul.txtUnidad.Text = ganador
+                        'frmresul.lblNumBilGdor.Visible = False
                         'frmresul.txtUnidad.Text = Me.txtUnidad.Text
-                        frmresul.txtUnidad.ForeColor = Color.Black()
+                        'frmresul.txtUnidad.ForeColor = Color.Black()
                         Me.txtDecena.Focus()
 
                     Else
@@ -101,10 +101,10 @@ Public Class Form1
                         Me.txtDecena.Focus()
                         Me.txtUnidad.BackColor = Color.Green()
                         Me.txtUnidad.ForeColor = Color.White
-                        frmresul.txtUnidad.Text = ganador
-                        frmresul.lblNumBilGdor.Visible = False
-                        frmresul.txtUnidad.Text = Me.txtUnidad.Text
-                        frmresul.txtUnidad.ForeColor = Color.Black()
+                        'frmresul.txtUnidad.Text = ganador
+                        'frmresul.lblNumBilGdor.Visible = False
+                        'frmresul.txtUnidad.Text = Me.txtUnidad.Text
+                        'frmresul.txtUnidad.ForeColor = Color.Black()
                         ' Dim SorteoActualUnidad As New SorteoNumeros(ganador)
                         'Dim frm2 As New frmResultados()
 
@@ -126,10 +126,10 @@ Public Class Form1
                         Me.txtDecena.Focus()
                         Me.txtDecena.BackColor = System.Drawing.Color.Red()
                         Me.txtDecena.ForeColor = Color.White
-                        frmresul.txtDecena.Text = Me.txtDecena.Text
-                        frmresul.txtDecena.ForeColor = Color.Red()
-                        frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"
-                        frmresul.lblNumBilGdor.Visible = True
+                        'frmresul.txtDecena.Text = Me.txtDecena.Text
+                        'frmresul.txtDecena.ForeColor = Color.Red()
+                        'frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"
+                        'frmresul.lblNumBilGdor.Visible = True
                         Exit Sub
                     ElseIf CantGan2 = 1 Then
 
@@ -138,9 +138,9 @@ Public Class Form1
                         Me.txtDecena.ForeColor = Color.White
                         Me.txtBillGanador.Text = billeteGanador
                         lblBilleteGanador.Visible = True
-                        frmresul.txtDecena.Text = Mid(ganador, 1, 1)
-                        frmresul.lblNumBilGdor.Visible = False
-                        frmresul.txtDecena.ForeColor = Color.Black()
+                        'frmresul.txtDecena.Text = Mid(ganador, 1, 1)
+                        'frmresul.lblNumBilGdor.Visible = False
+                        'frmresul.txtDecena.ForeColor = Color.Black()
                         'frmresul.lblNumBilGdor.Text = billeteGanador.ToString()
                         'frmresul.lblBGanador.Visible = True
                         'frmresul.lblNumBilGdor.Visible = True
@@ -151,9 +151,9 @@ Public Class Form1
                         Me.txtCentena.Focus()
                         Me.txtDecena.BackColor = System.Drawing.Color.Green()
                         Me.txtDecena.ForeColor = Color.White
-                        frmresul.txtDecena.Text = Mid(ganador, 1, 1)
-                        frmresul.lblNumBilGdor.Visible = False
-                        frmresul.txtDecena.ForeColor = Color.Black()
+                        'frmresul.txtDecena.Text = Mid(ganador, 1, 1)
+                        'frmresul.lblNumBilGdor.Visible = False
+                        'frmresul.txtDecena.ForeColor = Color.Black()
                         'frmresul.lblBGanador.Visible = True
                     End If
                 Case 3
@@ -168,10 +168,10 @@ Public Class Form1
 
                         Me.txtCentena.BackColor = System.Drawing.Color.Red()
                         Me.txtCentena.ForeColor = Color.White
-                        frmresul.txtCentena.Text = Me.txtCentena.Text
-                        frmresul.txtCentena.ForeColor = Color.Red()
-                        frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"
-                        frmresul.lblNumBilGdor.Visible = True
+                        ' frmresul.txtCentena.Text = Me.txtCentena.Text
+                        ' frmresul.txtCentena.ForeColor = Color.Red()
+                        ' frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"
+                        ' frmresul.lblNumBilGdor.Visible = True
                         Exit Sub
                     ElseIf CantGan3 = 1 Then
                         Me.txt3Aciertos.Text = CantGan3
@@ -180,9 +180,9 @@ Public Class Form1
                         Me.txtBillGanador.Text = billeteGanador
                         Me.txtUMil.Focus()
                         lblBilleteGanador.Visible = True
-                        frmresul.txtCentena.Text = Mid(ganador, 1, 1)
-                        frmresul.lblNumBilGdor.Visible = False
-                        frmresul.txtCentena.ForeColor = Color.Black()
+                        '  frmresul.txtCentena.Text = Mid(ganador, 1, 1)
+                        '  frmresul.lblNumBilGdor.Visible = False
+                        '  frmresul.txtCentena.ForeColor = Color.Black()
                         'frmresul.lblBGanador.Visible = True
                         'frmresul.lblNumBilGdor.Text = billeteGanador.ToString()
                         'frmresul.Timer1.Enabled = True
@@ -192,9 +192,9 @@ Public Class Form1
                         Me.txtUMil.Focus()
                         Me.txtCentena.BackColor = System.Drawing.Color.Green()
                         Me.txtCentena.ForeColor = Color.White
-                        frmresul.txtCentena.Text = Mid(ganador, 1, 1)
-                        frmresul.txtCentena.ForeColor = Color.Black()
-                        'frmresul.lblBGanador.Visible = True
+                        '    frmresul.txtCentena.Text = Mid(ganador, 1, 1)
+                        '    frmresul.txtCentena.ForeColor = Color.Black()
+
                     End If
                 Case 4
                     For Each billete In ListaBilletes
@@ -208,10 +208,10 @@ Public Class Form1
                         Me.txtUMil.Focus()
                         Me.txtUMil.BackColor = System.Drawing.Color.Red()
                         Me.txtUMil.ForeColor = Color.White
-                        frmresul.txtUnidadMil.Text = Me.txtUMil.Text
-                        frmresul.txtUnidadMil.ForeColor = Color.Red()
-                        frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"
-                        frmresul.lblNumBilGdor.Visible = True
+                        '  frmresul.txtUnidadMil.Text = Me.txtUMil.Text
+                        '  frmresul.txtUnidadMil.ForeColor = Color.Red()
+                        ' frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"
+                        ' frmresul.lblNumBilGdor.Visible = True
                         Exit Sub
                     ElseIf CantGan4 = 1 Then
                         Me.txtBillGanador.Text = billeteGanador
@@ -219,22 +219,22 @@ Public Class Form1
                         Me.txtUMil.BackColor = Color.Green()
                         Me.txtUMil.ForeColor = Color.White
                         lblBilleteGanador.Visible = True
-                        frmresul.txtUnidadMil.Text = Mid(ganador, 1, 1)
-                        frmresul.txtUnidadMil.ForeColor = Color.Black()
-                        'frmresul.lblBGanador.Visible = True
-                        'frmresul.lblNumBilGdor.Text = billeteGanador.ToString()
-                        'frmresul.lblNumBilGdor.Visible = True
-                        'frmresul.Timer1.Enabled = True
-                        frmresul.lblNumBilGdor.Visible = False
+                        '    frmresul.txtUnidadMil.Text = Mid(ganador, 1, 1)
+                        '    frmresul.txtUnidadMil.ForeColor = Color.Black()
+                        '    'frmresul.lblBGanador.Visible = True
+                        '    'frmresul.lblNumBilGdor.Text = billeteGanador.ToString()
+                        '    'frmresul.lblNumBilGdor.Visible = True
+                        '    'frmresul.Timer1.Enabled = True
+                        '   frmresul.lblNumBilGdor.Visible = False
                         Me.txtDMil.Focus()
                     Else
                         Me.txt4Aciertos.Text = CantGan4
                         Me.txtDMil.Focus()
                         Me.txtUMil.BackColor = System.Drawing.Color.Green()
                         Me.txtUMil.ForeColor = Color.White
-                        frmresul.txtUnidadMil.Text = Mid(ganador, 1, 1)
-                        frmresul.lblNumBilGdor.Visible = False
-                        frmresul.txtUnidadMil.ForeColor = Color.Black()
+                        '    frmresul.txtUnidadMil.Text = Mid(ganador, 1, 1)
+                        '    frmresul.lblNumBilGdor.Visible = False
+                        '    frmresul.txtUnidadMil.ForeColor = Color.Black()
                     End If
                 Case 5
                     For Each billete In ListaBilletes
@@ -248,10 +248,10 @@ Public Class Form1
                         Me.txtDMil.Focus()
                         Me.txtDMil.BackColor = System.Drawing.Color.Red()
                         Me.txtDMil.ForeColor = Color.White
-                        frmresul.txtDecenaMil.Text = Me.txtDMil.Text
-                        frmresul.txtDecenaMil.ForeColor = Color.Red()
-                        frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"
-                        frmresul.lblNumBilGdor.Visible = True
+                        '     frmresul.txtDecenaMil.Text = Me.txtDMil.Text
+                        '     frmresul.txtDecenaMil.ForeColor = Color.Red()
+                        '     frmresul.lblNumBilGdor.Text = "Extraer otra bolilla"
+                        '     frmresul.lblNumBilGdor.Visible = True
 
                         Exit Sub
                     ElseIf CantGan5 = 1 Then
@@ -260,22 +260,22 @@ Public Class Form1
                         Me.txtDMil.ForeColor = Color.White
                         Me.txtBillGanador.Text = billeteGanador
                         lblBilleteGanador.Visible = True
-                        frmresul.txtDecenaMil.Text = Mid(ganador, 1, 1)
-                        frmresul.lblBGanador.Visible = True
-                        frmresul.lblNumBilGdor.Visible = True
-                        frmresul.lblNumBilGdor.Text = ganador.ToString()
-                        frmresul.lblNumBilGdor.Height = 630
-                        frmresul.txtDecenaMil.ForeColor = Color.Black()
+                        '      frmresul.txtDecenaMil.Text = Mid(ganador, 1, 1)
+                        '      frmresul.lblBGanador.Visible = True
+                        '      frmresul.lblNumBilGdor.Visible = True
+                        '      frmresul.lblNumBilGdor.Text = ganador.ToString()
+                        '      frmresul.lblNumBilGdor.Height = 630
+                        '      frmresul.txtDecenaMil.ForeColor = Color.Black()
 
-                        frmresul.lblNumBilGdor.TextAlign = ContentAlignment.TopCenter
-
-                        frmresul.Timer1.Enabled = True
+                        '      frmresul.lblNumBilGdor.TextAlign = ContentAlignment.TopCenter
+                        '
+                        '                       frmresul.Timer1.Enabled = True
                     Else
                         Me.txt5Aciertos.Text = CantGan5
                         Me.txtDMil.ForeColor = Color.White
                         Me.txtDMil.BackColor = Color.Green
-                        frmresul.txtDecenaMil.Text = Mid(ganador, 1, 1)
-                        frmresul.txtDecenaMil.ForeColor = Color.Black()
+                        '     frmresul.txtDecenaMil.Text = Mid(ganador, 1, 1)
+                        '     frmresul.txtDecenaMil.ForeColor = Color.Black()
                         'frmresul.lblBGanador.Visible = True
 
                     End If
@@ -371,25 +371,25 @@ Public Class Form1
 
                 End If
             Next
-            For Each Ctrl As Control In Me.frmresul.Controls
-                If TypeOf (Ctrl) Is TextBox Then
-                    CType(Ctrl, TextBox).ForeColor = Color.Black()
-                    CType(Ctrl, TextBox).Clear()
+            'For Each Ctrl As Control In Me.frmresul.Controls
+            ' If TypeOf (Ctrl) Is TextBox Then
+            ' CType(Ctrl, TextBox).ForeColor = Color.Black()
+            'CType(Ctrl, TextBox).Clear()
 
-                End If
-            Next
+            '        End If
+            '           Next
             '  Me.frmresul.txtUnidad.Clear()
             ' Me.frmresul.txtDecena.Clear()
             'Me.frmresul.txtCentena.Clear()
             'Me.frmresul.txtUnidadMil.Clear()
             'Me.frmresul.txtDecenaMil.Clear()
-            Me.frmresul.lblBGanador.Visible = False
+            'Me.frmresul.lblBGanador.Visible = False
 
-            Me.frmresul.lblNumBilGdor.Text = "Extraer Bolillas"
-            frmresul.lblNumBilGdor.Visible = False
-            frmresul.lblNumBilGdor.ForeColor = Color.Black
-            frmresul.lblPremio.ForeColor = Color.Black
-            frmresul.Timer1.Enabled = False
+            ' Me.frmresul.lblNumBilGdor.Text = "Extraer Bolillas"
+            ' frmresul.lblNumBilGdor.Visible = False
+            ' frmresul.lblNumBilGdor.ForeColor = Color.Black
+            ' frmresul.lblPremio.ForeColor = Color.Black
+            ' frmresul.Timer1.Enabled = False
             Me.txtUnidad.Focus()
             Dim lector As StreamReader = New StreamReader(ruta)
             Dim vendido As String
@@ -425,23 +425,23 @@ Public Class Form1
 
             End If
         Next
-        For Each Ctrl As Control In Me.frmresul.Controls
-            If TypeOf (Ctrl) Is TextBox Then
-                CType(Ctrl, TextBox).ForeColor = Color.Black()
-                CType(Ctrl, TextBox).Clear()
-            End If
-        Next
-        '       Me.frmresul.txtUnidad.Clear()
-        '      Me.frmresul.txtDecena.Clear()
-        '     Me.frmresul.txtCentena.Clear()
-        '    Me.frmresul.txtUnidadMil.Clear()
-        '   Me.frmresul.txtDecenaMil.Clear()
-        Me.frmresul.lblBGanador.Visible = False
-        frmresul.lblNumBilGdor.Visible = False
-        Me.frmresul.lblNumBilGdor.Text = "Extraer Bolillas"
-        frmresul.lblNumBilGdor.ForeColor = Color.Black
-        frmresul.lblPremio.ForeColor = Color.Black
-        frmresul.Timer1.Enabled = False
+        '    For Each Ctrl As Control In Me.frmresul.Controls
+        '    If TypeOf (Ctrl) Is TextBox Then
+        '    CType(Ctrl, TextBox).ForeColor = Color.Black()
+        '    CType(Ctrl, TextBox).Clear()
+        '    End If
+        '    Next
+        '   '       Me.frmresul.txtUnidad.Clear()
+        '   '      Me.frmresul.txtDecena.Clear()
+        '   '     Me.frmresul.txtCentena.Clear()
+        '   '    Me.frmresul.txtUnidadMil.Clear()
+        '   '   Me.frmresul.txtDecenaMil.Clear()
+        '   Me.frmresul.lblBGanador.Visible = False
+        '   frmresul.lblNumBilGdor.Visible = False
+        '   Me.frmresul.lblNumBilGdor.Text = "Extraer Bolillas"
+        '   frmresul.lblNumBilGdor.ForeColor = Color.Black
+        '   frmresul.lblPremio.ForeColor = Color.Black
+        '   frmresul.Timer1.Enabled = False
         Me.txtUnidad.Focus()
     End Sub
     Private Sub txtDMil_TextChanged_1(sender As Object, e As EventArgs) Handles txtDMil.TextChanged
