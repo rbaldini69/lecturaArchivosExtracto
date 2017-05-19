@@ -114,12 +114,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SorteoNumeros.vb" />
-    <Compile Include="Sorteo Loto.vb">
+    <Compile Include="FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sorteo Loto.Designer.vb">
-      <DependentUpon>Sorteo Loto.vb</DependentUpon>
+    <Compile Include="FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -134,8 +133,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Sorteo Loto.resx">
-      <DependentUpon>Sorteo Loto.vb</DependentUpon>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
