@@ -4,7 +4,28 @@ Imports System.IO
 Imports System.Windows.Forms
 Imports System.Text
 
-Public Class Form1
+Public Class Form1                                             'posicion
+    Dim version As String                                       '1 a 2 
+    Dim CodJuego As String                                       '3 a 4
+    Dim NumeroDeSorteo As String                                       '5 a 9
+    Dim CantidadDeSorteosJugados As String                                       '10a 11
+    Dim proveedor As String                                       '12a 12
+    Dim provincia As String                                       '13a 14
+    Dim agencia As String                                       '15a 19
+    Dim digitoVerificador As String                                       '20a 20
+    Dim NumeroDeTerminal As String                                       '21a 28
+    Dim FechaDeVenta As String                                       '29a36
+    Dim HoraDeVenta As String                                       '37a 42
+    Dim FechaCancelacion As String                                       '43a 50
+    Dim HoraCancelacion As String                                       '52a 56
+    Dim cantidadDePartes As String                                       '57a 58
+    Dim numeroDeTicket As String                                       '59a 68
+    Dim OrdinalDeApuesta As String                                       '69a 70
+    Dim valorDeApuesta As String                                       '71a 80
+    Dim tipoDeDocumento As String                                       '82a 89
+    Dim reservado As String                                       '90a 90
+
+
     Dim ruta As String
     'Dim frmresul As New frmResultados()
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
