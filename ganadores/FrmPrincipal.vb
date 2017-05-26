@@ -5,7 +5,8 @@ Imports System.Windows.Forms
 Imports System.Text
 
 Public Class Form1
-    Dim registro As String
+    Dim cantRegistros As Integer = 0
+    Dim cantRegistros2 As Integer = 0
     'posicion
     Dim version As String                                       '1 a 2 
     Dim CodJuego As String                                       '3 a 4
@@ -26,6 +27,7 @@ Public Class Form1
     Dim valorDeApuesta As String                                       '71a 80
     Dim tipoDeDocumento As String                                       '82a 89
     Dim reservado As String                                       '90a 90
+    Dim valorTotalApuestas As Long = 0
 
 
     Dim ruta As String
@@ -117,7 +119,7 @@ Public Class Form1
     Private Sub txtArchivo_Click(sender As Object, e As EventArgs) Handles txtArchivo.Click
         Dim ruta As String
         Dim Openf As New OpenFileDialog
-        Dim CantidadBilletes As New ArrayList()
+        Dim registros As New ArrayList()
         'Dim vendido As String
         If Openf.ShowDialog() = DialogResult.OK Then
             ruta = Openf.FileName.ToString()
@@ -125,16 +127,43 @@ Public Class Form1
 
 
             'Call Button1_Click_2(e, sender)
-            For Each Ctrl As Control In Me.GroupBox1.Controls
+            For Each Ctrl As Control In Me.gbxExtractos.Controls
                 If TypeOf (Ctrl) Is TextBox Then
                     CType(Ctrl, TextBox).Clear()
                 End If
             Next
             Dim lector As StreamReader = New StreamReader(ruta)
-            Dim vendido As String
+            Dim lector2 As StreamReader = New StreamReader(ruta)
+            Dim linea As String
+            Dim linea0 As String
             Do
-                vendido = lector.ReadLine()
-            Loop Until vendido Is Nothing
+                linea0 = lector.ReadLine()
+                cantRegistros += 1
+
+
+            Loop Until linea0 Is Nothing
+            ProgressBar1.Maximum = cantRegistros
+            '        Timer1.Enabled = True
+
+            MsgBox("fin de lectura de archivo, cant. de registros: " & cantRegistros)
+            lector.Close()
+
+            Do
+                linea = lector2.ReadLine()
+                Me.valorDeApuesta = Mid(linea, 71, 8)
+                cantRegistros2 += 1
+                Dim auxvalor As Long
+                Long.TryParse(valorDeApuesta, auxValor)
+                valorTotalApuestas = valorTotalApuestas + auxvalor
+
+                ProgressBar1.Value += 1
+            Loop Until linea Is Nothing
+            Me.txtValorApuesta.Text = Format(CDec(valorTotalApuestas), "C")
+
+
+            lector2.Close()
+
+
         End If
 
     End Sub
@@ -143,14 +172,14 @@ Public Class Form1
 
     End Sub
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
-        For Each Ctrl As Control In Me.GroupBox1.Controls
+        For Each Ctrl As Control In Me.gbxExtractos.Controls
             If TypeOf (Ctrl) Is TextBox Then
                 CType(Ctrl, TextBox).Clear()
                 CType(Ctrl, TextBox).ForeColor = Color.Black
                 CType(Ctrl, TextBox).BackColor = Color.White
             End If
         Next
-        For Each Ctrl As Control In Me.GroupBox1.Controls
+        For Each Ctrl As Control In Me.gbxExtractos.Controls
             If TypeOf (Ctrl) Is TextBox Then
                 CType(Ctrl, TextBox).Clear()
             End If
@@ -216,7 +245,15 @@ Public Class Form1
 
     End Sub
 
-    Private Sub GroupBox1_Enter_1(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub GroupBox1_Enter_1(sender As Object, e As EventArgs) Handles gbxExtractos.Enter
 
+    End Sub
+
+    Private Sub ProgressBar1_Click(sender As Object, e As EventArgs) Handles ProgressBar1.Click
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ProgressBar1.Value = ProgressBar1.Value * 100 / cantRegistros
     End Sub
 End Class

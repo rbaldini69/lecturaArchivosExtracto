@@ -22,9 +22,14 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtArchivo = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbxExtractos = New System.Windows.Forms.GroupBox()
+        Me.txtValorApuesta = New System.Windows.Forms.TextBox()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.gbxExtractos.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -47,21 +52,40 @@ Partial Class Form1
         Me.txtArchivo.Text = "Archivo"
         Me.txtArchivo.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'gbxExtractos
         '
-        Me.GroupBox1.Location = New System.Drawing.Point(123, 26)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(603, 289)
-        Me.GroupBox1.TabIndex = 32
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.gbxExtractos.Controls.Add(Me.txtValorApuesta)
+        Me.gbxExtractos.Location = New System.Drawing.Point(123, 26)
+        Me.gbxExtractos.Name = "gbxExtractos"
+        Me.gbxExtractos.Size = New System.Drawing.Size(603, 289)
+        Me.gbxExtractos.TabIndex = 32
+        Me.gbxExtractos.TabStop = False
+        Me.gbxExtractos.Text = "Extracto Archivo"
+        '
+        'txtValorApuesta
+        '
+        Me.txtValorApuesta.Location = New System.Drawing.Point(147, 31)
+        Me.txtValorApuesta.Name = "txtValorApuesta"
+        Me.txtValorApuesta.Size = New System.Drawing.Size(100, 20)
+        Me.txtValorApuesta.TabIndex = 33
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(123, 339)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(602, 28)
+        Me.ProgressBar1.TabIndex = 33
+        '
+        'Timer1
+        '
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(862, 528)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.gbxExtractos)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtArchivo)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -69,10 +93,15 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Sorteo Loto"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.gbxExtractos.ResumeLayout(False)
+        Me.gbxExtractos.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Button1 As Button
     Friend WithEvents txtArchivo As Button
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gbxExtractos As GroupBox
+    Friend WithEvents txtValorApuesta As TextBox
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Timer1 As Timer
 End Class
