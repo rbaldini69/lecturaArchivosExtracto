@@ -132,6 +132,7 @@ Public Class Form1
             Dim lector As StreamReader = New StreamReader(ruta)
 
             Dim linea0 As String
+            btnCancelar.Enabled = True
             Do
                 linea0 = lector.ReadLine()
                 cantRegistros += 1
